@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Download, Plus } from "lucide-react";
 import logoAsset from "@/assets/mekane-selam-logo.png.asset.json";
+
+const MS1_DOWNLOAD_URL =
+  "https://github.com/anuteshome/MekaneSelam2/releases/download/v1.0.0/MS1.apk";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -167,20 +171,30 @@ function AppSection() {
             ))}
           </ul>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#" className="inline-flex items-center gap-3 rounded-2xl bg-foreground text-background px-5 py-3 hover:opacity-90 transition">
-              <span className="text-2xl"></span>
+            <a
+              href={MS1_DOWNLOAD_URL}
+              download="MS1.apk"
+              className="inline-flex items-center gap-3 rounded-2xl bg-foreground text-background px-5 py-3 hover:opacity-90 transition"
+              aria-label="Download the MS1 Android app"
+            >
+              <Download className="h-6 w-6" aria-hidden="true" />
               <span className="text-left">
-                <span className="block text-[10px] uppercase tracking-wider opacity-70">ያውርዱ ከ</span>
-                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>App Store</span>
+                <span className="block text-[10px] uppercase tracking-wider opacity-70">Android APK ያውርዱ</span>
+                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም MS1</span>
               </span>
             </a>
-            <a href="#" className="inline-flex items-center gap-3 rounded-2xl bg-foreground text-background px-5 py-3 hover:opacity-90 transition">
-              <span className="text-2xl">▶</span>
+            <button
+              type="button"
+              disabled
+              className="inline-flex cursor-not-allowed items-center gap-3 rounded-2xl border border-border bg-card px-5 py-3 text-muted-foreground opacity-75"
+              aria-label="Another app is coming soon"
+            >
+              <Plus className="h-6 w-6" aria-hidden="true" />
               <span className="text-left">
-                <span className="block text-[10px] uppercase tracking-wider opacity-70">ያግኙ ከ</span>
-                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>Google Play</span>
+                <span className="block text-[10px] uppercase tracking-wider opacity-70">ሌላ አፕሊኬሽን</span>
+                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>በቅርብ ቀን</span>
               </span>
-            </a>
+            </button>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">ነጻ · ማስታወቂያ የለውም · ለተማሪዎች የተዘጋጀ</p>
         </div>
