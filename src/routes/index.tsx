@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Download, Plus } from "lucide-react";
+import { Download } from "lucide-react";
 import logoAsset from "@/assets/mekane-selam-logo.png.asset.json";
 
 const MS1_DOWNLOAD_URL =
   "https://github.com/anuteshome/MekaneSelam2/releases/download/v1.0.0/MS1.apk";
+const MS2_DOWNLOAD_URL =
+  "https://github.com/anuteshome/MekaneSelamApp/releases/download/v.1.0.0/MS2.apk";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -183,18 +185,18 @@ function AppSection() {
                 <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም MS1</span>
               </span>
             </a>
-            <button
-              type="button"
-              disabled
-              className="inline-flex cursor-not-allowed items-center gap-3 rounded-2xl border border-border bg-card px-5 py-3 text-muted-foreground opacity-75"
-              aria-label="Another app is coming soon"
+            <a
+              href={MS2_DOWNLOAD_URL}
+              download="MS2.apk"
+              className="inline-flex items-center gap-3 rounded-2xl border border-foreground/20 bg-card px-5 py-3 text-foreground hover:bg-secondary transition"
+              aria-label="Download the MS2 Android app"
             >
-              <Plus className="h-6 w-6" aria-hidden="true" />
+              <Download className="h-6 w-6" aria-hidden="true" />
               <span className="text-left">
-                <span className="block text-[10px] uppercase tracking-wider opacity-70">ሌላ አፕሊኬሽን</span>
-                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>በቅርብ ቀን</span>
+                <span className="block text-[10px] uppercase tracking-wider opacity-70">Android APK ያውርዱ</span>
+                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም MS2</span>
               </span>
-            </button>
+            </a>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">ነጻ · ማስታወቂያ የለውም · ለተማሪዎች የተዘጋጀ</p>
         </div>
