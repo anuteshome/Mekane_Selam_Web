@@ -89,7 +89,7 @@ function Hero() {
           <div className="absolute inset-0 rounded-full bg-accent/40 blur-3xl" aria-hidden />
           <img
             src={logoAsset.url}
-            alt="የመካነ ሰላም የሰንበት ት/ቤት አርማ"
+            // alt="የመካነ ሰላም የሰንበት ት/ቤት አርማ"
             width={1024}
             height={1024}
             className="relative w-full h-auto max-w-md mx-auto drop-shadow-2xl"
