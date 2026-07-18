@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-sunday-school.jpg";
-import appMockup from "@/assets/app-mockup.png";
+import logoAsset from "@/assets/mekane-selam-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -27,17 +26,17 @@ function Header() {
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/70 border-b border-border/60">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 font-display text-xl font-bold">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground" style={{ fontFamily: "var(--font-display)" }}>✝</span>
-          <span style={{ fontFamily: "var(--font-display)" }}>Little Lambs</span>
+          <img src={logoAsset.url} alt="መካነ ሰላም" className="h-10 w-10 rounded-full object-contain bg-white" />
+          <span style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም</span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="#about" className="hover:text-foreground transition">About</a>
-          <a href="#app" className="hover:text-foreground transition">The App</a>
-          <a href="#schedule" className="hover:text-foreground transition">Schedule</a>
-          <a href="#contact" className="hover:text-foreground transition">Contact</a>
+          <a href="#about" className="hover:text-foreground transition">ስለ እኛ</a>
+          <a href="#app" className="hover:text-foreground transition">አፕሊኬሽኑ</a>
+          <a href="#schedule" className="hover:text-foreground transition">ትምህርት</a>
+          <a href="#contact" className="hover:text-foreground transition">አግኙን</a>
         </nav>
         <a href="#app" className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition">
-          Get the App
+          አፕሊኬሽኑን ያውርዱ
         </a>
       </div>
     </header>
@@ -56,38 +55,38 @@ function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Sundays · 9:30 AM
+            መካነ ሰላም የሰንበት ት/ቤት
           </span>
           <h1 className="mt-5 text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]" style={{ fontFamily: "var(--font-display)" }}>
-            Where little hearts <em className="not-italic text-primary">grow in faith.</em>
+            የቤተ ክርስቲያን ትምህርት <em className="not-italic text-primary">በእጅዎ ውስጥ።</em>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-lg">
-            Bible stories, songs, crafts, and friendships that last a lifetime. Join our Sunday school family and bring the joy home with our free mobile app.
+            መካነ ሰላም (MS1) ተማሪዎች የቤተ ክርስቲያን ትምህርታዊ ቁሳቁሶችን በክፍል፣ በኮርስ እና በምዕራፍ ተደራጅቶ በቀላሉ እንዲያገኙ የተዘጋጀ የሞባይል አፕሊኬሽን ነው። ትምህርትን ቀላል፣ የተደራጀ እና ተስማሚ ያደርገዋል።
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#app" className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] hover:opacity-95 transition" style={{ background: "var(--gradient-primary)" }}>
-              Download the App
+              አፕሊኬሽኑን ያውርዱ
             </a>
-            <a href="#schedule" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold hover:bg-secondary transition">
-              Visit on Sunday
+            <a href="#about" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold hover:bg-secondary transition">
+              ተጨማሪ ይመልከቱ
             </a>
           </div>
           <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
-            <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>250+</span>Kids weekly</div>
+            <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>1000+</span>ተማሪዎች</div>
             <div className="h-8 w-px bg-border" />
-            <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>12</span>Loving teachers</div>
+            <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>50+</span>ኮርሶች</div>
             <div className="h-8 w-px bg-border" />
-            <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>4.9★</span>Parent rating</div>
+            <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>4.9★</span>ደረጃ</div>
           </div>
         </div>
         <div className="relative">
-          <div className="absolute -inset-4 rounded-[2rem] bg-accent/40 rotate-2" aria-hidden />
+          <div className="absolute inset-0 rounded-full bg-accent/40 blur-3xl" aria-hidden />
           <img
-            src={heroImg}
-            alt="Happy children reading a bible together in a warmly lit chapel"
-            width={1536}
-            height={1200}
-            className="relative rounded-[2rem] shadow-[var(--shadow-soft)] w-full h-auto object-cover"
+            src={logoAsset.url}
+            alt="የመካነ ሰላም የሰንበት ት/ቤት አርማ"
+            width={1024}
+            height={1024}
+            className="relative w-full h-auto max-w-md mx-auto drop-shadow-2xl"
           />
         </div>
       </div>
@@ -97,18 +96,18 @@ function Hero() {
 
 function Highlights() {
   const items = [
-    { icon: "📖", title: "Bible Stories", body: "Weekly stories brought to life with pictures, puppets, and lots of laughter." },
-    { icon: "🎵", title: "Worship & Songs", body: "Kid-friendly worship where every voice is a joyful noise unto the Lord." },
-    { icon: "🎨", title: "Crafts & Play", body: "Hands-on activities that turn each lesson into something they can take home." },
+    { icon: "📚", title: "በክፍል የተደራጀ", body: "ትምህርቶች በክፍል፣ በኮርስ እና በምዕራፍ ተደራጅተው ቀርበዋል።" },
+    { icon: "📖", title: "የቤተ ክርስቲያን ትምህርት", body: "ትክክለኛ የኦርቶዶክስ ተዋሕዶ ትምህርታዊ ቁሳቁሶች በአንድ ቦታ።" },
+    { icon: "📱", title: "ቀላል አጠቃቀም", body: "ተማሪ ወዳጅ የሆነ ንድፍ — በማንኛውም ጊዜ በሞባይልዎ ይማሩ።" },
   ];
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-20">
       <div className="max-w-2xl">
         <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-          A safe, joyful place to <em className="not-italic text-primary">meet Jesus.</em>
+          ትምህርትን <em className="not-italic text-primary">ዘመናዊ በሆነ መንገድ።</em>
         </h2>
         <p className="mt-4 text-muted-foreground text-lg">
-          Every Sunday, our team welcomes children ages 3–12 into age-grouped classrooms designed to spark curiosity and nurture faith.
+          መካነ ሰላም (MS1) ባህላዊ ትምህርትን ዘመናዊ በማድረግ ዲጂታል ትምህርታዊ ቁሳቁሶችን በቀጥታ ወደ ተማሪዎች ያደርሳል።
         </p>
       </div>
       <div className="mt-12 grid md:grid-cols-3 gap-6">
@@ -131,27 +130,36 @@ function AppSection() {
       <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 items-center">
         <div className="relative flex justify-center md:justify-start">
           <div className="absolute w-72 h-72 rounded-full bg-primary/20 blur-3xl" aria-hidden />
-          <img
-            src={appMockup}
-            alt="Little Lambs mobile app shown on a phone"
-            width={1024}
-            height={1280}
-            loading="lazy"
-            className="relative max-w-xs md:max-w-sm w-full drop-shadow-2xl"
-          />
+          <div className="relative mx-auto w-64 md:w-72 aspect-[9/19] rounded-[2.5rem] border-8 border-foreground bg-background shadow-[var(--shadow-soft)] overflow-hidden">
+            <div className="h-full w-full flex flex-col items-center justify-center p-6 text-center" style={{ background: "var(--gradient-primary)" }}>
+              <img src={logoAsset.url} alt="Mekane Selam" className="w-28 h-28 object-contain bg-white rounded-full p-2" />
+              <div className="mt-4 text-primary-foreground font-bold text-lg" style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም</div>
+              <div className="mt-1 text-primary-foreground/80 text-xs">MS1 · ትምህርታዊ አፕ</div>
+              <div className="mt-6 w-full space-y-2">
+                {["ክፍል 1 · መሠረታዊ ትምህርት", "ክፍል 2 · ቅዱስ ግጻዌ", "ክፍል 3 · ታሪከ ቤተ ክርስቲያን"].map((t) => (
+                  <div key={t} className="rounded-xl bg-background/95 text-foreground text-xs font-medium px-3 py-2 text-left">{t}</div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider">
-            Free Mobile App
+            ነጻ የሞባይል አፕሊኬሽን
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-            Take Sunday school <em className="not-italic text-primary">everywhere.</em>
+            መካነ ሰላም <em className="not-italic text-primary">MS1</em>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            The Little Lambs app brings weekly lessons, bedtime bible stories, worship songs, and family devotionals to your phone — so faith keeps growing all week long.
+            መካነ ሰላም (MS1) የቤተ ክርስቲያን ትምህርታዊ ቁሳቁሶችን በክፍል፣ በኮርስ እና በምዕራፍ አደራጅቶ የሚያቀርብ የሞባይል አፕሊኬሽን ነው። አስተዳዳሪዎችም ትምህርታዊ ይዘቶችን በቀላሉ ማስተዳደር ይችላሉ።
           </p>
           <ul className="mt-6 space-y-3 text-foreground/90">
-            {["Weekly video lessons synced with class", "Bedtime bible story audio library", "Memory verse tracker & rewards", "Family devotional guides for parents"].map((f) => (
+            {[
+              "በክፍል፣ በኮርስ እና በምዕራፍ የተደራጀ ይዘት",
+              "በቀላሉ የሚዘዋወር ተማሪ ወዳጅ በይነገጽ",
+              "ለአስተዳዳሪዎች ቀላል የይዘት አስተዳደር",
+              "በማንኛውም ጊዜና ቦታ የሚደረስ ትምህርት",
+            ].map((f) => (
               <li key={f} className="flex items-start gap-3">
                 <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs">✓</span>
                 {f}
@@ -162,19 +170,19 @@ function AppSection() {
             <a href="#" className="inline-flex items-center gap-3 rounded-2xl bg-foreground text-background px-5 py-3 hover:opacity-90 transition">
               <span className="text-2xl"></span>
               <span className="text-left">
-                <span className="block text-[10px] uppercase tracking-wider opacity-70">Download on the</span>
+                <span className="block text-[10px] uppercase tracking-wider opacity-70">ያውርዱ ከ</span>
                 <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>App Store</span>
               </span>
             </a>
             <a href="#" className="inline-flex items-center gap-3 rounded-2xl bg-foreground text-background px-5 py-3 hover:opacity-90 transition">
               <span className="text-2xl">▶</span>
               <span className="text-left">
-                <span className="block text-[10px] uppercase tracking-wider opacity-70">Get it on</span>
+                <span className="block text-[10px] uppercase tracking-wider opacity-70">ያግኙ ከ</span>
                 <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>Google Play</span>
               </span>
             </a>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">Free forever · Ad-free · Made for families</p>
+          <p className="mt-4 text-xs text-muted-foreground">ነጻ · ማስታወቂያ የለውም · ለተማሪዎች የተዘጋጀ</p>
         </div>
       </div>
     </section>
@@ -183,26 +191,26 @@ function AppSection() {
 
 function Schedule() {
   const groups = [
-    { age: "Ages 3–5", name: "Little Lambs", time: "9:30 – 10:30 AM", room: "Room 101" },
-    { age: "Ages 6–8", name: "Shepherds", time: "9:30 – 10:45 AM", room: "Room 202" },
-    { age: "Ages 9–12", name: "Disciples", time: "9:30 – 11:00 AM", room: "Room 303" },
+    { age: "ደረጃ 1", name: "መሠረታዊ ትምህርት", time: "6 ምዕራፎች", room: "ለጀማሪዎች" },
+    { age: "ደረጃ 2", name: "ቅዱስ ግጻዌ", time: "8 ምዕራፎች", room: "መካከለኛ ደረጃ" },
+    { age: "ደረጃ 3", name: "ታሪከ ቤተ ክርስቲያን", time: "10 ምዕራፎች", room: "ከፍተኛ ደረጃ" },
   ];
   return (
     <section id="schedule" className="mx-auto max-w-6xl px-6 py-20">
       <div className="flex items-end justify-between flex-wrap gap-4">
         <div>
-          <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>Sunday Schedule</h2>
-          <p className="mt-3 text-muted-foreground text-lg">Every Sunday morning — come as you are.</p>
+          <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>የትምህርት ደረጃዎች</h2>
+          <p className="mt-3 text-muted-foreground text-lg">በአፕሊኬሽኑ ውስጥ የሚገኙ ኮርሶች።</p>
         </div>
-        <a href="#contact" className="text-primary font-semibold hover:underline">Get directions →</a>
+        <a href="#contact" className="text-primary font-semibold hover:underline">ተጨማሪ →</a>
       </div>
       <div className="mt-10 grid md:grid-cols-3 gap-4">
         {groups.map((g) => (
           <div key={g.name} className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
             <div className="text-xs font-semibold uppercase tracking-wider text-primary">{g.age}</div>
             <div className="mt-2 text-2xl font-bold" style={{ fontFamily: "var(--font-display)" }}>{g.name}</div>
-            <div className="mt-4 text-sm text-muted-foreground">🕘 {g.time}</div>
-            <div className="mt-1 text-sm text-muted-foreground">📍 {g.room}</div>
+            <div className="mt-4 text-sm text-muted-foreground">📚 {g.time}</div>
+            <div className="mt-1 text-sm text-muted-foreground">🎓 {g.room}</div>
           </div>
         ))}
       </div>
@@ -215,17 +223,17 @@ function CTA() {
     <section id="contact" className="mx-auto max-w-6xl px-6 pb-24">
       <div className="relative overflow-hidden rounded-[2.5rem] p-10 md:p-16 text-center" style={{ background: "var(--gradient-primary)" }}>
         <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground" style={{ fontFamily: "var(--font-display)" }}>
-          Come visit us this Sunday.
+          ዛሬ አፕሊኬሽኑን ያውርዱ።
         </h2>
         <p className="mt-4 text-primary-foreground/90 max-w-xl mx-auto">
-          Bring the whole family — we'll save you a seat, and your kids a story.
+          መካነ ሰላም — የቤተ ክርስቲያን ትምህርት በእጅዎ ውስጥ።
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="mailto:hello@littlelambs.church" className="inline-flex rounded-full bg-background text-foreground px-6 py-3 font-semibold hover:opacity-95 transition">
-            hello@littlelambs.church
+          <a href="mailto:info@mekaneselam.org" className="inline-flex rounded-full bg-background text-foreground px-6 py-3 font-semibold hover:opacity-95 transition">
+            info@mekaneselam.org
           </a>
           <a href="#app" className="inline-flex rounded-full border border-primary-foreground/40 text-primary-foreground px-6 py-3 font-semibold hover:bg-primary-foreground/10 transition">
-            Download the App
+            አፕሊኬሽኑን ያውርዱ
           </a>
         </div>
       </div>
@@ -238,10 +246,10 @@ function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground">✝</span>
-          <span>© {new Date().getFullYear()} Little Lambs Sunday School</span>
+          <img src={logoAsset.url} alt="" className="h-7 w-7 rounded-full object-contain bg-white" />
+          <span>© {new Date().getFullYear()} መካነ ሰላም የሰንበት ት/ቤት</span>
         </div>
-        <div>Made with love for our little disciples.</div>
+        <div>MS1 · ትምህርታዊ የሞባይል አፕሊኬሽን</div>
       </div>
     </footer>
   );
