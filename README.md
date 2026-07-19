@@ -1,0 +1,1 @@
+A responsive web landing page for the Mekane Selam educational ecosystem, providing information about the platform, highlighting its features, and offering the latest APK downloads for students from Grades 1–12.
