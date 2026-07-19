@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
-import logoAsset from "@/assets/mekane-selam-logo.png.asset.json";
-
+import logoAsset from "@/assets/logos.png";
+import logoAssets from "@/assets/removedlogo.png";
+import splash from "@/assets/image.png";
 const MS1_DOWNLOAD_URL =
   "https://github.com/anuteshome/MekaneSelam2/releases/download/v1.0.0/MS1.apk";
 const MS2_DOWNLOAD_URL =
@@ -19,7 +20,7 @@ function Index() {
         <Hero />
         <Highlights />
         <AppSection />
-        <Schedule />
+        {/* <Schedule /> */}
         <CTA />
       </main>
       <Footer />
@@ -32,7 +33,7 @@ function Header() {
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/70 border-b border-border/60">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 font-display text-xl font-bold">
-          <img src={logoAsset.url} alt="መካነ ሰላም" className="h-10 w-10 rounded-full object-contain bg-white" />
+          <img src={logoAsset} alt="መካነ ሰላም" className="h-10 w-10 rounded-full object-contain bg-white" />
           <span style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም</span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -67,7 +68,7 @@ function Hero() {
             የቤተ ክርስቲያን ትምህርት <em className="not-italic text-primary">በእጅዎ ውስጥ።</em>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-lg">
-            መካነ ሰላም (MS1) ተማሪዎች የቤተ ክርስቲያን ትምህርታዊ ቁሳቁሶችን በክፍል፣ በኮርስ እና በምዕራፍ ተደራጅቶ በቀላሉ እንዲያገኙ የተዘጋጀ የሞባይል አፕሊኬሽን ነው። ትምህርትን ቀላል፣ የተደራጀ እና ተስማሚ ያደርገዋል።
+            መካነ ሰላም ተማሪዎች የቤተ ክርስቲያን ትምህርታዊ ቁሳቁሶችን በክፍል፣ በኮርስ እና በምዕራፍ ተደራጅቶ በቀላሉ እንዲያገኙ የተዘጋጀ የሞባይል አፕሊኬሽን ነው። ትምህርትን ቀላል፣ የተደራጀ እና ተስማሚ ያደርገዋል።
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#app" className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] hover:opacity-95 transition" style={{ background: "var(--gradient-primary)" }}>
@@ -77,18 +78,18 @@ function Hero() {
               ተጨማሪ ይመልከቱ
             </a>
           </div>
-          <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
+          {/* <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
             <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>1000+</span>ተማሪዎች</div>
             <div className="h-8 w-px bg-border" />
             <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>50+</span>ኮርሶች</div>
             <div className="h-8 w-px bg-border" />
             <div><span className="block text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>4.9★</span>ደረጃ</div>
-          </div>
+          </div> */}
         </div>
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-accent/40 blur-3xl" aria-hidden />
           <img
-            src={logoAsset.url}
+            src={logoAssets}
             // alt="የመካነ ሰላም የሰንበት ት/ቤት አርማ"
             width={1024}
             height={1024}
@@ -113,7 +114,7 @@ function Highlights() {
           ትምህርትን <em className="not-italic text-primary">ዘመናዊ በሆነ መንገድ።</em>
         </h2>
         <p className="mt-4 text-muted-foreground text-lg">
-          መካነ ሰላም (MS1) ባህላዊ ትምህርትን ዘመናዊ በማድረግ ዲጂታል ትምህርታዊ ቁሳቁሶችን በቀጥታ ወደ ተማሪዎች ያደርሳል።
+          መካነ ሰላም (MS) ባህላዊ ትምህርትን ዘመናዊ በማድረግ ዲጂታል ትምህርታዊ ቁሳቁሶችን በቀጥታ ወደ ተማሪዎች ያደርሳል።
         </p>
       </div>
       <div className="mt-12 grid md:grid-cols-3 gap-6">
@@ -138,11 +139,11 @@ function AppSection() {
           <div className="absolute w-72 h-72 rounded-full bg-primary/20 blur-3xl" aria-hidden />
           <div className="relative mx-auto w-64 md:w-72 aspect-[9/19] rounded-[2.5rem] border-8 border-foreground bg-background shadow-[var(--shadow-soft)] overflow-hidden">
             <div className="h-full w-full flex flex-col items-center justify-center p-6 text-center" style={{ background: "var(--gradient-primary)" }}>
-              <img src={logoAsset.url} alt="Mekane Selam" className="w-28 h-28 object-contain bg-white rounded-full p-2" />
+              <img src={logoAsset} alt="Mekane Selam" className="w-28 h-28 object-contain bg-white rounded-full p-2" />
               <div className="mt-4 text-primary-foreground font-bold text-lg" style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም</div>
-              <div className="mt-1 text-primary-foreground/80 text-xs">MS1 · ትምህርታዊ አፕ</div>
+              <div className="mt-1 text-primary-foreground/80 text-xs">MS · ትምህርታዊ አፕ</div>
               <div className="mt-6 w-full space-y-2">
-                {["ክፍል 1 · መሠረታዊ ትምህርት", "ክፍል 2 · ቅዱስ ግጻዌ", "ክፍል 3 · ታሪከ ቤተ ክርስቲያን"].map((t) => (
+                {["ክፍል 1 · መሠረተ ሐይማኖት", "ክፍል 2 · ቅዱሳት መጻህፍት", "ክፍል 3 ·  የቤተ ክርስቲያን ታሪከ"].map((t) => (
                   <div key={t} className="rounded-xl bg-background/95 text-foreground text-xs font-medium px-3 py-2 text-left">{t}</div>
                 ))}
               </div>
@@ -154,16 +155,16 @@ function AppSection() {
             ነጻ የሞባይል አፕሊኬሽን
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-            መካነ ሰላም <em className="not-italic text-primary">MS1</em>
+            መካነ ሰላም <em className="not-italic text-primary">MS</em>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            መካነ ሰላም (MS1) የቤተ ክርስቲያን ትምህርታዊ ቁሳቁሶችን በክፍል፣ በኮርስ እና በምዕራፍ አደራጅቶ የሚያቀርብ የሞባይል አፕሊኬሽን ነው። አስተዳዳሪዎችም ትምህርታዊ ይዘቶችን በቀላሉ ማስተዳደር ይችላሉ።
+            መካነ ሰላም (MS) የቤተ ክርስቲያን ትምህርታዊ ቁሳቁሶችን በክፍል፣ በኮርስ እና በምዕራፍ አደራጅቶ የሚያቀርብ የሞባይል አፕሊኬሽን ነው። አስተዳዳሪዎችም ትምህርታዊ ይዘቶችን በቀላሉ ማስተዳደር ይችላሉ።
           </p>
           <ul className="mt-6 space-y-3 text-foreground/90">
             {[
               "በክፍል፣ በኮርስ እና በምዕራፍ የተደራጀ ይዘት",
               "በቀላሉ የሚዘዋወር ተማሪ ወዳጅ በይነገጽ",
-              "ለአስተዳዳሪዎች ቀላል የይዘት አስተዳደር",
+              // "ለአስተዳዳሪዎች ቀላል የይዘት አስተዳደር",
               "በማንኛውም ጊዜና ቦታ የሚደረስ ትምህርት",
             ].map((f) => (
               <li key={f} className="flex items-start gap-3">
@@ -182,7 +183,7 @@ function AppSection() {
               <Download className="h-6 w-6" aria-hidden="true" />
               <span className="text-left">
                 <span className="block text-[10px] uppercase tracking-wider opacity-70">Android APK ያውርዱ</span>
-                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም MS1</span>
+                <span className="block text-base font-semibold -mt-0.5" style={{ fontFamily: "var(--font-display)" }}>መካነ ሰላም MS</span>
               </span>
             </a>
             <a
@@ -205,34 +206,34 @@ function AppSection() {
   );
 }
 
-function Schedule() {
-  const groups = [
-    { age: "ደረጃ 1", name: "መሠረታዊ ትምህርት", time: "6 ምዕራፎች", room: "ለጀማሪዎች" },
-    { age: "ደረጃ 2", name: "ቅዱስ ግጻዌ", time: "8 ምዕራፎች", room: "መካከለኛ ደረጃ" },
-    { age: "ደረጃ 3", name: "ታሪከ ቤተ ክርስቲያን", time: "10 ምዕራፎች", room: "ከፍተኛ ደረጃ" },
-  ];
-  return (
-    <section id="schedule" className="mx-auto max-w-6xl px-6 py-20">
-      <div className="flex items-end justify-between flex-wrap gap-4">
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>የትምህርት ደረጃዎች</h2>
-          <p className="mt-3 text-muted-foreground text-lg">በአፕሊኬሽኑ ውስጥ የሚገኙ ኮርሶች።</p>
-        </div>
-        <a href="#contact" className="text-primary font-semibold hover:underline">ተጨማሪ →</a>
-      </div>
-      <div className="mt-10 grid md:grid-cols-3 gap-4">
-        {groups.map((g) => (
-          <div key={g.name} className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary">{g.age}</div>
-            <div className="mt-2 text-2xl font-bold" style={{ fontFamily: "var(--font-display)" }}>{g.name}</div>
-            <div className="mt-4 text-sm text-muted-foreground">📚 {g.time}</div>
-            <div className="mt-1 text-sm text-muted-foreground">🎓 {g.room}</div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+// function Schedule() {
+//   const groups = [
+//     { age: "ደረጃ 1", name: "መሠረታዊ ትምህርት", time: "6 ምዕራፎች", room: "ለጀማሪዎች" },
+//     { age: "ደረጃ 2", name: "ቅዱስ ግጻዌ", time: "8 ምዕራፎች", room: "መካከለኛ ደረጃ" },
+//     { age: "ደረጃ 3", name: "ታሪከ ቤተ ክርስቲያን", time: "10 ምዕራፎች", room: "ከፍተኛ ደረጃ" },
+//   ];
+//   return (
+//     <section id="schedule" className="mx-auto max-w-6xl px-6 py-20">
+//       <div className="flex items-end justify-between flex-wrap gap-4">
+//         <div>
+//           <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>የትምህርት ደረጃዎች</h2>
+//           <p className="mt-3 text-muted-foreground text-lg">በአፕሊኬሽኑ ውስጥ የሚገኙ ኮርሶች።</p>
+//         </div>
+//         <a href="#contact" className="text-primary font-semibold hover:underline">ተጨማሪ →</a>
+//       </div>
+//       <div className="mt-10 grid md:grid-cols-3 gap-4">
+//         {groups.map((g) => (
+//           <div key={g.name} className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
+//             <div className="text-xs font-semibold uppercase tracking-wider text-primary">{g.age}</div>
+//             <div className="mt-2 text-2xl font-bold" style={{ fontFamily: "var(--font-display)" }}>{g.name}</div>
+//             <div className="mt-4 text-sm text-muted-foreground">📚 {g.time}</div>
+//             <div className="mt-1 text-sm text-muted-foreground">🎓 {g.room}</div>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
 
 function CTA() {
   return (
@@ -245,10 +246,10 @@ function CTA() {
           መካነ ሰላም — የቤተ ክርስቲያን ትምህርት በእጅዎ ውስጥ።
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="mailto:info@mekaneselam.org" className="inline-flex rounded-full bg-background text-foreground px-6 py-3 font-semibold hover:opacity-95 transition">
+          {/* <a href="mailto:info@mekaneselam.org" className="inline-flex rounded-full bg-background text-foreground px-6 py-3 font-semibold hover:opacity-95 transition">
             info@mekaneselam.org
-          </a>
-          <a href="#app" className="inline-flex rounded-full border border-primary-foreground/40 text-primary-foreground px-6 py-3 font-semibold hover:bg-primary-foreground/10 transition">
+          </a> */}
+          <a href="#app" className="inline-flex rounded-full border border-primary-foreground/40 bg-background text-foreground  px-6 py-3 font-semibold  transition">
             አፕሊኬሽኑን ያውርዱ
           </a>
         </div>
@@ -262,10 +263,10 @@ function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="" className="h-7 w-7 rounded-full object-contain bg-white" />
+          <img src={logoAsset} alt="" className="h-7 w-7 rounded-full object-contain bg-white" />
           <span>© {new Date().getFullYear()} መካነ ሰላም የሰንበት ት/ቤት</span>
         </div>
-        <div>MS1 · ትምህርታዊ የሞባይል አፕሊኬሽን</div>
+        <div>MS · ትምህርታዊ የሞባይል አፕሊኬሽን</div>
       </div>
     </footer>
   );
